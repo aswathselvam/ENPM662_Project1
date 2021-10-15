@@ -4,30 +4,28 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="car_assem">
-  <link name="dummy_link">
+    <link name="dummy_link">
   </link>
   <joint name="dummy_joint" type="fixed">
-        <origin
-        xyz="0 0 0"
-        rpy="1.5 0 0" />
-	  <parent link="dummy_link" />
-	  <child link="base_link" />
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="dummy_link"/>
+    <child link="base_link"/>
   </joint>
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="0.434959557233976 0.480154416166651 0.780915642325222"
+        xyz="-0.00928225892424905 -3.84853373613936E-08 -0.0279829948416439"
         rpy="0 0 0" />
       <mass
         value="18.9957633941014" />
       <inertia
         ixx="0.321480497658355"
-        ixy="0.00882534016113909"
-        ixz="4.49226682056294E-08"
-        iyy="1.73624351581292"
-        iyz="-7.09701033323967E-08"
-        izz="1.42813532065719" />
+        ixy="-4.49226682044018E-08"
+        ixz="-0.00882534016113908"
+        iyy="1.42813532065719"
+        iyz="-7.09701033377331E-08"
+        izz="1.73624351581292" />
     </inertial>
     <visual>
       <origin
@@ -57,15 +55,15 @@
     name="front_left_steering_link">
     <inertial>
       <origin
-        xyz="0.0789613521158623 0.0201784329051714 -7.01327474983415E-08"
+        xyz="0.0789613521158623 -0.0460215670948286 -7.01327474983415E-08"
         rpy="0 0 0" />
       <mass
         value="0.130435980995533" />
       <inertia
         ixx="3.04982371151654E-05"
         ixy="4.9215344508306E-05"
-        ixz="-8.19738919368111E-10"
-        iyy="0.000537452105458136"
+        ixz="-8.19738919364723E-10"
+        iyy="0.000537452105458135"
         iyz="3.34922488643002E-10"
         izz="0.000556335665656311" />
     </inertial>
@@ -97,8 +95,8 @@
     name="front_left_steering"
     type="revolute">
     <origin
-      xyz="0.091551 0.41654 0.92953"
-      rpy="0 -1.5464 0" />
+      xyz="0.33413 0.14861 -0.0254"
+      rpy="1.5708 0 1.5952" />
     <parent
       link="base_link" />
     <child
@@ -115,16 +113,16 @@
     name="front_left_wheel_link">
     <inertial>
       <origin
-        xyz="0.0429772351798592 -0.00991361852421707 7.7715611723761E-16"
+        xyz="0.0429772351798594 8.63814757829373E-05 7.7715611723761E-16"
         rpy="0 0 0" />
       <mass
         value="2.31289269458194" />
       <inertia
         ixx="0.0122648275270047"
-        ixy="-7.47197150787787E-06"
-        ixz="-1.78893358460108E-18"
+        ixy="-7.4719715078779E-06"
+        ixz="-1.76860479386698E-18"
         iyy="0.00714411189689047"
-        iyz="-3.68565211174027E-19"
+        iyz="-3.68776969410841E-19"
         izz="0.00715609598929908" />
     </inertial>
     <visual>
@@ -155,7 +153,7 @@
     name="front_left_wheel"
     type="continuous">
     <origin
-      xyz="0.084724 0.020158 -0.0087955"
+      xyz="0.084724 -0.0508 0"
       rpy="-1.0749 0 0" />
     <parent
       link="front_left_steering_link" />
@@ -168,7 +166,7 @@
     name="front_right_steering_link">
     <inertial>
       <origin
-        xyz="0.0789613530952155 0.0201784328893301 -7.01499886096579E-08"
+        xyz="0.0789613530952155 -0.04602156711067 -7.01499886096579E-08"
         rpy="0 0 0" />
       <mass
         value="0.13043597902095" />
@@ -208,8 +206,8 @@
     name="front_right_steering"
     type="revolute">
     <origin
-      xyz="0.091551 0.41654 0.6323"
-      rpy="3.1416 1.548 3.1416" />
+      xyz="0.33413 -0.14861 -0.0254"
+      rpy="1.5708 0 -1.548" />
     <parent
       link="base_link" />
     <child
@@ -226,7 +224,7 @@
     name="front_right_wheel_link">
     <inertial>
       <origin
-        xyz="0.042763266193903 -0.00991361852421607 -1.11022302462516E-16"
+        xyz="0.042763266193903 8.63814757839365E-05 -1.11022302462516E-16"
         rpy="0 0 0" />
       <mass
         value="2.31289269458194" />
@@ -266,7 +264,7 @@
     name="front_right_wheel"
     type="continuous">
     <origin
-      xyz="0.084938 0.021602 -0.0078446"
+      xyz="0.084938 -0.0508 0"
       rpy="-0.90183 0 0" />
     <parent
       link="front_right_steering_link" />
@@ -279,7 +277,7 @@
     name="back_left_wheel_link">
     <inertial>
       <origin
-        xyz="0.0362610763466902 -0.0100576053882299 6.43690811298336E-05"
+        xyz="0.0362610763466902 -5.7605388229881E-05 6.43690811298336E-05"
         rpy="0 0 0" />
       <mass
         value="2.31289269458194" />
@@ -319,8 +317,8 @@
     name="back_left_wheel"
     type="continuous">
     <origin
-      xyz="0.60728 0.42837 1.0349"
-      rpy="2.7212 -1.5708 0" />
+      xyz="-0.18569 0.254 -0.0889"
+      rpy="1.9912 0 1.5708" />
     <parent
       link="base_link" />
     <child
@@ -332,14 +330,14 @@
     name="back_right_wheel_link">
     <inertial>
       <origin
-        xyz="-0.0399389236533098 -0.00991361852421546 2.77555756156289E-17"
+        xyz="0.0362610763466903 8.63814757844361E-05 2.77555756156289E-17"
         rpy="0 0 0" />
       <mass
         value="2.31289269458194" />
       <inertia
         ixx="0.0122648275270047"
         ixy="-7.47197150789892E-06"
-        ixz="2.4818065354551E-19"
+        ixz="2.48604170019137E-19"
         iyy="0.00714411189689046"
         iyz="0"
         izz="0.00715609598929908" />
@@ -372,8 +370,8 @@
     name="back_right_wheel"
     type="continuous">
     <origin
-      xyz="0.62095 0.42207 0.45072"
-      rpy="1.2833 1.5708 0" />
+      xyz="-0.18569 -0.254 -0.0889"
+      rpy="2.8541 0 -1.5708" />
     <parent
       link="base_link" />
     <child
@@ -381,4 +379,72 @@
     <axis
       xyz="1 0 0" />
   </joint>
+    <link name="base_laser">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.00029774 0.0066667 0.00013047"/>
+      <mass value="0.15717"/>
+      <inertia ixx="6.7885E-05" ixy="-1.3987E-07" ixz="-8.1554E-07" iyy="0.00013173" iyz="-9.0932E-08" izz="7.1972E-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://car_assem/meshes/ydlidar.dae"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.64706 0.61961 0.58824 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://car_assem/meshes/ydlidar.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="laser_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.00036659 0.00064155 -0.00027052"/>
+      <mass value="0.25482"/>
+      <inertia ixx="8.9194E-05" ixy="1.8116E-07" ixz="3.6435E-08" iyy="0.00018279" iyz="2.423E-07" izz="0.00011103"/>
+    </inertial>
+    <!--visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ydlidar_ros/meshes/ydlidar.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual-->
+    <!--collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ydlidar_ros/meshes/ydlidar.dae" />
+      </geometry>
+    </collision-->
+  </link>
+  <joint name="laser_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.03172"/>
+    <parent link="base_laser"/>
+    <child link="laser_frame"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Add your gazebo sensors here -->
+
+  <!-- Create a joint between your robot and sensor -->
+  <joint name="lidarGlue" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_laser"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+
+
 </robot>
